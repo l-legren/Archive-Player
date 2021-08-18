@@ -1,11 +1,11 @@
 import React from "react";
-import { HeaderWrapper, HeaderContent } from "./styles";
+import { HeaderWrapper, HeaderContent, HeaderTitle } from "./styles";
 
 const Header:React.FC = () => {
     return (
         <HeaderWrapper>
             <HeaderContent>
-                <h2>HEEEY</h2>
+                <HeaderTitle>archive player</HeaderTitle>
             </HeaderContent>
         </HeaderWrapper>
     );
