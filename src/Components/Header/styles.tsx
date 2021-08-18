@@ -6,7 +6,7 @@ export const HeaderWrapper = styled.div`
     position: fixed;
     height: 55px;
     width: 100%;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.secondary};
+    border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
 `;
 
 export const HeaderContent = styled.div`
@@ -23,6 +23,3 @@ export const HeaderTitle = styled.h2`
     font-size: 2rem;
     cursor: default;
 `
-export const HeaderTitle2 = styled.h2`
-
-`;

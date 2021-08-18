@@ -3,7 +3,6 @@ import {
     HeaderWrapper,
     HeaderContent,
     HeaderTitle,
-    HeaderTitle2,
 } from "./styles";
 
 const Header:React.FC = () => {
