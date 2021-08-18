@@ -6,7 +6,7 @@ export const HeaderWrapper = styled.div`
     position: fixed;
     height: 55px;
     width: 100%;
-    border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
+    border-bottom: 3px solid ${({ theme }) => theme.colors.primary};
 `;
 
 export const HeaderContent = styled.div`

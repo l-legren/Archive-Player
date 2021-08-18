@@ -1,14 +1,23 @@
-import React from 'react'
-import { InputHeadline, InputWrapper } from './styles'
+import React from "react";
+import {
+    InputHeadline,
+    HeadlineWrapper,
+    InputWrapper,
+    InputField,
+    SectionWrapper
+} from "./styles";
 
-const InputSection:React.FC = () => {
+const InputSection: React.FC = () => {
     return (
-        <InputWrapper>
-            <InputHeadline>
-                look for your favourite player
-            </InputHeadline>
-        </InputWrapper>
-    )
-}
+        <SectionWrapper>
+            <HeadlineWrapper>
+                <InputHeadline>look for your favourite player</InputHeadline>
+            </HeadlineWrapper>
+            <InputWrapper>
+                <InputField />
+            </InputWrapper>
+        </SectionWrapper>
+    );
+};
 
-export default InputSection
+export default InputSection;
