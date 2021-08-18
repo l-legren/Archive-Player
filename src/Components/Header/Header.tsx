@@ -1,5 +1,10 @@
 import React from "react";
-import { HeaderWrapper, HeaderContent, HeaderTitle } from "./styles";
+import {
+    HeaderWrapper,
+    HeaderContent,
+    HeaderTitle,
+    HeaderTitle2,
+} from "./styles";
 
 const Header:React.FC = () => {
     return (
