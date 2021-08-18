@@ -1,12 +1,17 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
+
+// Local imports
 import GlobalStyle from './global';
+import theme from './theme';
+import Header from './Components/Header/Header';
 
 const App:React.FC = () => {
   return (
-    <>
-      <GlobalStyle />
-      <h1>PRUEBA</h1>
-    </>
+      <ThemeProvider theme={theme}>
+          <GlobalStyle />
+          <Header></Header>
+      </ThemeProvider>
   );
 }
 
