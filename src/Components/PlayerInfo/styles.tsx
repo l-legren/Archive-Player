@@ -31,10 +31,16 @@ export const PlayerCard = styled.div`
 export const PlayerImage = styled.img`
     width: 250px;
     height: 250px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        width: 200px;
+        height: 200px;
+    }
 `;
 
 export const InfoWrapper = styled.div`
     display: flex;
+    width: 100%;
     flex-direction: column;
     justify-content: space-around;
     margin-left: 30px;
@@ -72,15 +78,15 @@ export const Role = styled.h4`
     color: ${({ theme }) => theme.colors.dark1};
 
     @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 `;
 
@@ -92,14 +98,14 @@ export const Team = styled.h4`
     color: ${({ theme }) => theme.colors.dark1};
 
     @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 `;
