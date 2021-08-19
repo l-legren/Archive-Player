@@ -1,24 +1,38 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from "react";
 
 // Local Imports
-import { ResultWrapper } from './styles'
-import { PlayerProfile } from '../SearchPlayerInput/SearchPlayerInput'
+import {
+    PlayerCard,
+    PlayerImage,
+    ResultWrapper,
+    InfoWrapper,
+    Age,
+    Team,
+    Role,
+} from "./styles";
+import { PlayerProfile } from "../SearchPlayerInput/SearchPlayerInput";
 
 interface PlayerProfileProps {
-    data: PlayerProfile
+    data: PlayerProfile;
 }
 
-const PlayerInfo: React.FC<PlayerProfileProps> = ({data}) => {
-    
+const PlayerInfo: React.FC<PlayerProfileProps> = ({ data }) => {
     useEffect(() => {
-        console.log("Data inside", data)
-    }, [data])
+        console.log("Data inside", data);
+    }, [data]);
 
     return (
         <ResultWrapper>
-            Hey
+            <PlayerCard>
+                <PlayerImage src={data.picture} />
+                <InfoWrapper>
+                    <Age>{`Age: ${data.age}`}</Age>
+                    <Role>{`Role: ${data.role}`}</Role>
+                    <Team>{`Team: ${data.team}`}</Team>
+                </InfoWrapper>
+            </PlayerCard>
         </ResultWrapper>
-    )
-}
+    );
+};
 
 export default PlayerInfo;
