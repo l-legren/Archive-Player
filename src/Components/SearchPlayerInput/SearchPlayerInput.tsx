@@ -11,6 +11,7 @@ import {
     InputTitle,
     FieldWrapper,
     InputButton,
+    EmptyInfo,
 } from "./styles";
 
 export interface PlayerProfile {
@@ -25,7 +26,8 @@ const InputSection: React.FC = () => {
     const [result, setResult] = useState<PlayerProfile>();
 
     const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchPlayer(e.target.value);
+        const lowercasePlayer = e.target.value.toLowerCase();
+        setSearchPlayer(lowercasePlayer);
     };
 
     const handleSubmit = async () => {
@@ -59,7 +61,7 @@ const InputSection: React.FC = () => {
                     <InputButton onClick={handleSubmit}>GO!</InputButton>
                 </FieldWrapper>
             </InputWrapper>
-            {result ? <PlayerInfo data={result} /> : null}
+            {result ? <PlayerInfo data={result} /> : <EmptyInfo />}
         </SectionWrapper>
     );
 };

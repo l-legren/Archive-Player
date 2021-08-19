@@ -5,7 +5,7 @@ import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./global";
 import theme from "./theme";
 import Header from "./Components/Header/Header";
-import InputSection from "./Components/ArchivePlayerHeadline/ArchivePlayerHeadline";
+import InputSection from "./Components/SearchPlayerInput/SearchPlayerInput";
 
 const App: React.FC = () => {
     return (

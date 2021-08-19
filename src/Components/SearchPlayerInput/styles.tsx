@@ -90,7 +90,7 @@ export const FieldWrapper = styled.div`
 `
 
 export const InputButton = styled.button`
-    width: 50px;
+    width: 80px;
     height: 50px;
     font-size: 2rem;
     border-radius: 0%;
@@ -114,7 +114,7 @@ export const InputButton = styled.button`
 export const InputField = styled.input`
     width: 200px;
     height: 50px;
-    font-size: 2rem;
+    font-size: 1.6rem;
     border-radius: 0%;
 
 
@@ -123,4 +123,9 @@ export const InputField = styled.input`
         height: 30px;
         font-size: 1rem;
     }
+`;
+
+export const EmptyInfo = styled.div`
+    height: 100%;
+    background-color: ${({ theme }) => theme.colors.secondary};
 `;

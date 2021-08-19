@@ -2,9 +2,13 @@ import React, {useEffect} from 'react'
 
 // Local Imports
 import { ResultWrapper } from './styles'
-import { PlayerProfile } from '../ArchivePlayerHeadline/ArchivePlayerHeadline'
+import { PlayerProfile } from '../SearchPlayerInput/SearchPlayerInput'
 
-const PlayerInfo: React.FC<{ data: PlayerProfile }> = (data) => {
+interface PlayerProfileProps {
+    data: PlayerProfile
+}
+
+const PlayerInfo: React.FC<PlayerProfileProps> = ({data}) => {
     
     useEffect(() => {
         console.log("Data inside", data)
