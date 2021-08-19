@@ -7,6 +7,7 @@ export const HeaderWrapper = styled.div`
     height: 55px;
     width: 100%;
     border-bottom: 3px solid ${({ theme }) => theme.colors.primary};
+    z-index: 5;
 `;
 
 export const HeaderContent = styled.div`

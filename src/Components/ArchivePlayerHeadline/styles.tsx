@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const SectionWrapper = styled.div`
     position: relative;
     top: 55px;
+    height: calc(100% - 55px);
     display: flex;
     flex-direction: column;
 `;
@@ -65,6 +66,7 @@ export const InputWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: 5px solid ${({ theme }) => theme.colors.light1}
 `;
 
 export const InputTitle = styled.h4`
@@ -121,4 +123,9 @@ export const InputField = styled.input`
         height: 30px;
         font-size: 1rem;
     }
+`;
+
+export const ResultWrapper = styled.div`
+    height: 100%;
+    background-color: ${({ theme }) => theme.colors.secondary};
 `;

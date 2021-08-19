@@ -8,6 +8,7 @@ import {
     InputTitle,
     FieldWrapper,
     InputButton,
+    ResultWrapper,
 } from "./styles";
 
 interface PlayerProfile {
@@ -35,7 +36,7 @@ const InputSection: React.FC = () => {
         const playerInfo = await fetch(
             `https://web-sandbox.onefootball.com/assignments/player/profile/${profileId}`
         ).then((res) => res.json());
-        setResult(playerInfo.profile)
+        setResult(playerInfo.profile);
         setSearchPlayer("");
     };
 
@@ -56,9 +57,7 @@ const InputSection: React.FC = () => {
                     <InputButton onClick={handleSubmit}>GO!</InputButton>
                 </FieldWrapper>
             </InputWrapper>
-            <ResultWrapper>
-                
-            </ResultWrapper>
+            <ResultWrapper></ResultWrapper>
         </SectionWrapper>
     );
 };

@@ -10,7 +10,11 @@ const GlobalStyle = createGlobalStyle`
     }
     #root
     {
-        margin:0 auto;
+        height: 100%;
+    }
+    body
+    {
+        height: 100vh
     }
 `;
 
