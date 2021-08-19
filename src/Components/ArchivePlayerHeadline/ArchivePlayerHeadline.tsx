@@ -1,4 +1,3 @@
-import { stringify } from "querystring";
 import React, { useState } from "react";
 import {
     InputHeadline,
@@ -20,7 +19,7 @@ interface PlayerProfile {
 
 const InputSection: React.FC = () => {
     const [searchPlayer, setSearchPlayer] = useState("");
-    const [result, setResult] = useState();
+    const [result, setResult] = useState<PlayerProfile>();
 
     const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchPlayer(e.target.value);
@@ -36,7 +35,7 @@ const InputSection: React.FC = () => {
         const playerInfo = await fetch(
             `https://web-sandbox.onefootball.com/assignments/player/profile/${profileId}`
         ).then((res) => res.json());
-        console.log(playerInfo)
+        setResult(playerInfo.profile)
         setSearchPlayer("");
     };
 
@@ -57,6 +56,9 @@ const InputSection: React.FC = () => {
                     <InputButton onClick={handleSubmit}>GO!</InputButton>
                 </FieldWrapper>
             </InputWrapper>
+            <ResultWrapper>
+                
+            </ResultWrapper>
         </SectionWrapper>
     );
 };
