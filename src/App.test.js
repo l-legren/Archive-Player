@@ -5,7 +5,6 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import App from "./App";
 
 test("renders element", async () => {
-
     const { getByText, getByPlaceholderText, getByDisplayValue } = render(
         <App />
     );
@@ -22,5 +21,21 @@ test("renders element", async () => {
     fireEvent.click(submitButton);
 
     getByDisplayValue("fabio");
-    await screen.findByText("Team: Juventus")
+    await screen.findByText("Team: Juventus");
+
+    fireEvent.change(input, {
+        target: { value: "giorgio" },
+    });
+    fireEvent.click(submitButton);
+
+    getByDisplayValue("giorgio");
+    await screen.findByText("Player not available");
+
+    fireEvent.change(input, {
+        target: { value: "francesco" },
+    });
+    fireEvent.click(submitButton);
+
+    getByDisplayValue("francesco");
+    await screen.findByText("Player not available");
 });
