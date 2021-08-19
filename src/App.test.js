@@ -20,7 +20,7 @@ test("renders element", async () => {
     });
     fireEvent.click(submitButton);
 
-    getByDisplayValue("fabio");
+    screen.getByDisplayValue("fabio");
     await screen.findByText("Team: Juventus");
 
     fireEvent.change(input, {
