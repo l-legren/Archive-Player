@@ -125,6 +125,18 @@ export const InputField = styled.input`
     }
 `;
 
+export const NoErrorMessage = styled.div`
+    height: 40px;
+`
+
+export const ErrorMessage = styled.p`
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.dark1};
+`;
+
 export const EmptyInfo = styled.div`
     height: 100%;
     background-color: ${({ theme }) => theme.colors.secondary};
