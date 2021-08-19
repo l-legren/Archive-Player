@@ -124,8 +124,3 @@ export const InputField = styled.input`
         font-size: 1rem;
     }
 `;
-
-export const ResultWrapper = styled.div`
-    height: 100%;
-    background-color: ${({ theme }) => theme.colors.secondary};
-`;

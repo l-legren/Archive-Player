@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import PlayerInfo from "../PlayerInfo/PlayerInfo";
+
+// Local Imports
 import {
     InputHeadline,
     HeadlineWrapper,
@@ -8,10 +11,9 @@ import {
     InputTitle,
     FieldWrapper,
     InputButton,
-    ResultWrapper,
 } from "./styles";
 
-interface PlayerProfile {
+export interface PlayerProfile {
     age: string;
     picture: string;
     role: string;
@@ -57,7 +59,7 @@ const InputSection: React.FC = () => {
                     <InputButton onClick={handleSubmit}>GO!</InputButton>
                 </FieldWrapper>
             </InputWrapper>
-            <ResultWrapper></ResultWrapper>
+            {result ? <PlayerInfo data={result} /> : null}
         </SectionWrapper>
     );
 };
