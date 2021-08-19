@@ -39,7 +39,7 @@ const InputSection: React.FC = () => {
         )
             .then((res) => res.json())
             .then((res) => {
-                if (res.active) {
+                if (res.active === "true") {
                     return res["profile-id"];
                 } else {
                     setPlayerAvailable(false);
