@@ -12,8 +12,8 @@ import {
     FieldWrapper,
     InputButton,
     EmptyInfo,
-    ErrorMessage,
-    NoErrorMessage,
+    NotAvailableWrapper,
+    NotAvailableText,
 } from "./styles";
 
 export interface PlayerProfile {
@@ -26,7 +26,7 @@ export interface PlayerProfile {
 const InputSection: React.FC = () => {
     const [searchPlayer, setSearchPlayer] = useState("");
     const [result, setResult] = useState<PlayerProfile>();
-    const [errorFetching, setErrorFetching] = useState(false);
+    const [playerAvailable, setPlayerAvailable] = useState(true);
 
     const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const lowercasePlayer: string = e.target.value.toLowerCase();
@@ -38,20 +38,26 @@ const InputSection: React.FC = () => {
             `https://web-sandbox.onefootball.com/assignments/player/data/${searchPlayer}.json`
         )
             .then((res) => res.json())
-            .then((res) => res["profile-id"])
+            .then((res) => {
+                if (res.active) {
+                    return res["profile-id"];
+                } else {
+                    setPlayerAvailable(false);
+                }
+            })
             .catch((error) => {
                 console.error("Error fetching data", error);
-                setErrorFetching(true);
+                setPlayerAvailable(false);
             });
 
         if (profileId) {
+            setPlayerAvailable(true);
             const playerInfo: PlayerProfile = await fetch(
                 `https://web-sandbox.onefootball.com/assignments/player/profile/${profileId}`
             )
                 .then((res) => res.json())
                 .then((res) => res.profile);
             setResult(playerInfo);
-            setErrorFetching(false);
         }
 
         setSearchPlayer("");
@@ -73,13 +79,16 @@ const InputSection: React.FC = () => {
                     />
                     <InputButton onClick={handleSubmit}>GO!</InputButton>
                 </FieldWrapper>
-                {errorFetching ? (
-                    <ErrorMessage>Please enter a valid name</ErrorMessage>
-                ) : (
-                    <NoErrorMessage />
-                )}
             </InputWrapper>
-            {result ? <PlayerInfo data={result} /> : <EmptyInfo />}
+            {playerAvailable && result ? (
+                <PlayerInfo data={result} />
+            ) : !playerAvailable ? (
+                <NotAvailableWrapper>
+                    <NotAvailableText>Player not available</NotAvailableText>
+                </NotAvailableWrapper>
+            ) : (
+                <EmptyInfo />
+            )}
         </SectionWrapper>
     );
 };

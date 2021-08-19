@@ -66,7 +66,7 @@ export const InputWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-bottom: 5px solid ${({ theme }) => theme.colors.light1}
+    border-bottom: 5px solid ${({ theme }) => theme.colors.light1};
 `;
 
 export const InputTitle = styled.h4`
@@ -87,7 +87,7 @@ export const InputTitle = styled.h4`
 
 export const FieldWrapper = styled.div`
     display: flex;
-`
+`;
 
 export const InputButton = styled.button`
     width: 80px;
@@ -117,7 +117,6 @@ export const InputField = styled.input`
     font-size: 1.6rem;
     border-radius: 0%;
 
-
     @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
         width: 150px;
         height: 30px;
@@ -127,7 +126,7 @@ export const InputField = styled.input`
 
 export const NoErrorMessage = styled.div`
     height: 40px;
-`
+`;
 
 export const ErrorMessage = styled.p`
     padding: 10px;
@@ -135,6 +134,28 @@ export const ErrorMessage = styled.p`
     text-align: center;
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.dark1};
+`;
+
+export const NotAvailableWrapper = styled.div`
+    height: 100%;
+    background-color: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.primary};
+    display: flex;
+    justify-content: center;
+`;
+
+export const NotAvailableText = styled.h2`
+    text-transform: uppercase;
+    margin-top: 50px;
+    font-size: 3rem;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        font-size: 2rem;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+        font-size: 1.2rem;
+    }
 `;
 
 export const EmptyInfo = styled.div`
