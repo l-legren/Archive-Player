@@ -1,0 +1,33 @@
+import React from "react";
+import {
+    render,
+    screen,
+    fireEvent,
+} from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+
+// Local imports
+import App from "./App";
+
+test("renders element", () => {
+    // const root = document.createElement("root");
+    // ReactDOM.render(<App />, root);
+
+    const { getByText, getByPlaceholderText, getByDisplayValue } = render(
+        <App />
+    );
+
+    expect(getByText("onefootball")).not.toBeNull();
+    expect(getByText("player archive")).not.toBeNull();
+
+    const input = getByPlaceholderText("ENTER PLAYER");
+    const submitButton = getByText("GO!");
+
+    fireEvent.change(input, {
+        target: { value: "fabio" },
+    });
+    // fireEvent.click(submitButton)
+
+    getByDisplayValue("fabio");
+    // getByText("Juventus")
+});
