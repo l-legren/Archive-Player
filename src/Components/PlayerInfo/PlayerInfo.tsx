@@ -17,9 +17,6 @@ interface PlayerProfileProps {
 }
 
 const PlayerInfo: React.FC<PlayerProfileProps> = ({ data }) => {
-    useEffect(() => {
-        console.log("Data inside", data);
-    }, [data]);
 
     return (
         <ResultWrapper>
