@@ -9,7 +9,7 @@ const Header:React.FC = () => {
     return (
         <HeaderWrapper>
             <HeaderContent>
-                <HeaderTitle>archive player</HeaderTitle>
+                <HeaderTitle>onefootball</HeaderTitle>
             </HeaderContent>
         </HeaderWrapper>
     );

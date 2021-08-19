@@ -62,13 +62,36 @@ export const InputWrapper = styled.div`
     padding: 50px;
     background-color: ${({ theme }) => theme.colors.dark1};
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+`;
+
+export const InputTitle = styled.h4`
+    font-size: 1.2rem;
+    color: ${({ theme }) => theme.colors.primary};
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        font-size: 1rem;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+        font-size: 0.8rem;
+    }
 `;
 
 export const InputField = styled.input`
     width: 200px;
     height: 50px;
-    font-size: 30px;
+    font-size: 2rem;
     border-radius: 0%;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        width: 150px;
+        height: 30px;
+        font-size: 1rem;
+    }
 `;

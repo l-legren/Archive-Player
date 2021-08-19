@@ -22,4 +22,11 @@ export const HeaderTitle = styled.h2`
     text-transform: uppercase;
     font-size: 2rem;
     cursor: default;
-`
+    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        font-size: 1.6rem;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+        font-size: 1.4rem;
+    }
+`;
