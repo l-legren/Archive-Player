@@ -83,11 +83,38 @@ export const InputTitle = styled.h4`
     }
 `;
 
+export const FieldWrapper = styled.div`
+    display: flex;
+`
+
+export const InputButton = styled.button`
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    border-radius: 0%;
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.dark1};
+    margin-left: 15px;
+    border: none;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+        width: 50px;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    :hover {
+        background-color: ${({ theme }) => theme.colors.secondary};
+        color: ${({ theme }) => theme.colors.primary};
+    }
+`;
+
 export const InputField = styled.input`
     width: 200px;
     height: 50px;
     font-size: 2rem;
     border-radius: 0%;
+
 
     @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
         width: 150px;
