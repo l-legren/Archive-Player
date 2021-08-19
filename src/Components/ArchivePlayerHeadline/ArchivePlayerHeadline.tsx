@@ -16,7 +16,10 @@ const InputSection: React.FC = () => {
 
     const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSearchPlayer(e.target.value)
-        console.log(searchPlayer)
+    }
+
+    const handleSubmit = () => {
+        console.log("clicking", searchPlayer)
     }
 
     return (
@@ -27,8 +30,8 @@ const InputSection: React.FC = () => {
             <InputWrapper>
                 <InputTitle>look for your favourite player</InputTitle>
                 <FieldWrapper>
-                    <InputField type="text" value={searchPlayer} onChange={onInputChange}/>
-                    <InputButton>GO!</InputButton>
+                    <InputField type="text" placeholder="ENTER PLAYER" value={searchPlayer} onChange={onInputChange}/>
+                    <InputButton onClick={handleSubmit} >GO!</InputButton>
                 </FieldWrapper>
             </InputWrapper>
         </SectionWrapper>
