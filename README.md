@@ -44,4 +44,4 @@ To make it run just clone the repository, install all the dependencies with ```n
 
 ### Screen 3
 
-![Screen 3](https://github.com/l-legren/Archive-Player/blob/master/public/images/screen1.jpg)
+![Screen 3](https://github.com/l-legren/Archive-Player/blob/master/public/images/screen3.jpg)
