@@ -36,12 +36,12 @@ To make it run just clone the repository, install all the dependencies with ```n
 
 ### Screen 1
 
-![Screen 1]()
+![Screen 1](https://github.com/l-legren/Archive-Player/blob/master/public/images/screen1.jpg)
 
 ### Screen 2
 
-![Screen 2]()
+![Screen 2](https://github.com/l-legren/Archive-Player/blob/master/public/images/screen2.jpg)
 
 ### Screen 3
 
-![Screen 3]()
+![Screen 3](https://github.com/l-legren/Archive-Player/blob/master/public/images/screen1.jpg)
