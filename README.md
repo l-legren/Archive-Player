@@ -17,7 +17,7 @@ In order to make React components more readable and better structured I decided 
 
 As already mentiones the application is completely responsive so it can be used from a small screen or a mobile phone.
 
-I wrote unit tests to check the behaviour of the UI when firing events and asynchronous code. I chose to write the tests with the React Testing Library running on Jest.
+I wrote unit tests to check the behaviour of the UI when firing events and handling asynchronous code. I chose to write the tests with the React Testing Library running on Jest.
 
 
 ## Technologies I used
