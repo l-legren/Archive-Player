@@ -5,7 +5,7 @@
 
 This project is a search tool for football players  made for browser and mobile application.
 
-The project is built with React, a widely used JavaScript framework for building user interfaces from small and isolated pieces of code called components. 
+The project is built with React, a widely used JavaScript framework for building user interfaces from small and isolated pieces of code called components.
 
 In this case, I used React 17, a version of React that enables the use of React Hooks and functional components instead of class components. Hooks enhances the readability and reusability of code as well as simplifies lifecycles methods of the virtual DOM.  
 
@@ -13,11 +13,12 @@ There is no need to backend here, so I decided to build the website as a Single 
 
 Passing props between components in this case is also pretty cheap, consisting only on one level of depth. There is no need of using any state management tool like Redux or React Context. The props are passed directly from Parent Component to Child Component.
 
-In order to make React components more readable and better structured I decided to implement styled components. Every component has its own folder inside src/components and styles files are separated from the file of the functional commponent.
+In order to make React components more readable and better structured I decided to implement styled components. Every component has its own folder inside src/components and styles files are separated from the file of the functional commponent. At the same type styled'components enables the use of a theme provider that makes the code also more readable and keeps the different colors and breakpoints for example just under one file. 
 
 As already mentiones the application is completely responsive so it can be used from a small screen or a mobile phone.
 
-TESTINGG
+I wrote unit tests to check the behaviour of the UI when firing events and asynchronous code. I chose to write the tests with the React Testing Library running on Jest.
+
 
 ## Technologies I used
 
@@ -40,3 +41,7 @@ To make it run just clone the repository, install all the dependencies with ```n
 ### Screen 2
 
 ![Screen 2]()
+
+### Screen 3
+
+![Screen 3]()

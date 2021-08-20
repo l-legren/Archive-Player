@@ -17,11 +17,13 @@ interface PlayerProfileProps {
 }
 
 const PlayerInfo: React.FC<PlayerProfileProps> = ({ data }) => {
-
     return (
         <ResultWrapper>
             <PlayerCard>
-                <PlayerImage src={data.picture} />
+                <PlayerImage
+                    src={data.picture}
+                    alt="Image of football player"
+                />
                 <InfoWrapper>
                     <Age>{`Age: ${data.age}`}</Age>
                     <Role>{`Role: ${data.role}`}</Role>

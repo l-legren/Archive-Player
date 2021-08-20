@@ -92,12 +92,13 @@ export const FieldWrapper = styled.div`
 export const InputButton = styled.button`
     width: 80px;
     height: 50px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     border-radius: 0%;
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.dark1};
     margin-left: 15px;
     border: none;
+    cursor: pointer;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
         width: 50px;
